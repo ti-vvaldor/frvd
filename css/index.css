@@ -113,3 +113,11 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+#map img {
+    max-width: none;
+    min-width: 0px;
+}
+.btn {
+    color: #000000;
+}

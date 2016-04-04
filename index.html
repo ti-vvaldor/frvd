@@ -17,11 +17,11 @@
         body {
             font-family: 'Lato';
         }
-
         .fa-btn {
             margin-right: 6px;
         }
-        #map { position:absolute; top:0; bottom:0; width:100%; height:720px }
+        #map { position:absolute; top:5%; bottom:0;width:100%;}
+
     </style>
 </head>
 <body id="app-layout">
@@ -36,19 +36,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a href="/">Carte</a></li>
+                <li id="get-position"><a class="btn btn-primary" href="#"><i class="glyphicon-map-marker glyphicon"></i>Position actuel</a></li>
+                <li id="get-start"><a class="btn btn-success" href="#"><i class="glyphicon-play glyphicon"></i>Démarrer le suivi</a></li>
+                <li id="get-stop"><a class="btn btn-danger" href="#"><i class="glyphicon-stop glyphicon"></i>Arrêter le suivi</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                <li><a href="#">Login</a></li>
+                <li id="login"><a href="#">Login</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     </a>
@@ -59,32 +61,22 @@
         </div>
     </div>
 </nav>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-xm-11">
             <div id="map"></div>
         </div>
     </div>
 </div>
-<div>
-    <button class="button" id="get-position" name="position" value="Position">Position</button>
-</div>
-<div>
-    <button class="button" id="get-facile" name="get-facile" value="Facile">Facile</button>
-</div>
-<div>
-    <button class="button" id="get-intermediaire" name="get-intermediaire" value="intermediaire">Intermediaire</button>
-</div>
-<div>
-    <button class="button" id="get-difficile" name="get-difficile" value="Difficile">Difficile</button>
-</div>
+
+
 <!-- JavaScripts -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
-<script src="js/leaflet.ajax.min.js"></script>
-<!--<script src="js/leaflet.js"></script>-->
+<script src="js/moment-with-locales.min.js"></script>
 <script src="js/vvdmap.js"></script>
+<script src="js/L.Polyline.measuredDistance.js"></script>
 </body>
 </html>
